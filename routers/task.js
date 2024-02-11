@@ -7,7 +7,8 @@ const taskRouter = Router();
 
 const table = "tasks";
 taskRouter
-  .get("/", async (req, res) => {
+    .get("/", async (req, res) => {
+      
     const query = `SELECT * FROM ${table}`;
     try {
       const [results] = await pool.execute(query);
